@@ -1,130 +1,62 @@
-# FocusFlow — Core App Screens
+# FocusFlow — App Features and State
 
-## SWYNEX Technologies Internship — Task 2
+## SWYNEX Technologies Internship — Task 3
 
-FocusFlow is a productivity and focus-management Android application designed to help users organize tasks, track progress, and maintain focused work sessions.
+FocusFlow is an Android productivity application designed to help users organize daily tasks, monitor progress, and manage focused work sessions.
 
----
+## Task Objective
 
-## 📌 Task 2 — Core App Screens
+Implement core application features with input validation, appropriate empty states, and persistent or local state management.
 
-### Task Objective
+## Core Feature: Task Management
 
-The objective of Task 2 is to build the primary screens of the FocusFlow application and provide a functional, reviewable mobile interface.
+The task management feature allows users to create, view, edit, and manage tasks through the FocusFlow interface.
 
----
+### Features
 
-## 💡 Application
+- Create tasks with a title and description
+- Assign categories: Study, Work, Personal, and Other
+- Set task priority and due-date information
+- Display saved tasks in the task list
+- View task details
+- Edit and delete tasks
+- Mark tasks as completed
 
-### FocusFlow
+### Validation
 
-FocusFlow combines task management, progress tracking, focused work sessions, and application settings into a single Android application.
+- Prevent saving a task when its required title is empty
+- Display a clear validation message
+- Keep the user on the task form until the required information is corrected
 
-The core screens developed for this task are based on the application concept and screen flow defined in Task 1.
+### Empty State
 
----
+When no tasks exist, display a helpful message explaining that the user has not created any tasks yet, along with an action to create the first task.
 
-## 📱 Core Screens
+### State Management
 
-### 1. Dashboard
+The application uses local persistence and state management to maintain task information. Persistence behavior will be verified through application testing.
 
-The Dashboard acts as the main screen of the application.
+## Technology Stack
 
-Features include:
+- Kotlin
+- Jetpack Compose
+- Android Studio
+- Android SDK
+- DataStore
+- Material 3
 
-- Personalized greeting
-- Today's progress
-- Task information
-- Add Task action
-- Focus Timer access
-- Progress access
-- Settings access
+## Testing Plan
 
----
+1. Verify the empty state when no tasks exist.
+2. Verify that an empty task title triggers validation.
+3. Verify that a valid task appears in the task list after saving.
+4. Verify editing, completion, and deletion.
+5. Verify that saved task information remains available after restarting the app.
 
-### 2. Add/Edit Task
+## Repository
 
-Allows users to create and modify tasks.
+**Project:** FocusFlow  
+**Internship:** SWYNEX Technologies  
+**Task:** Task 3 — App Features and State
 
-Features include:
-
-- Task title
-- Description
-- Priority
-- Category
-- Due-date information
-- Save/update task
-
-Available categories:
-
-- Study
-- Work
-- Personal
-- Other
-
----
-
-### 3. Task Details
-
-Displays complete information about a selected task.
-
-Users can:
-
-- View task information
-- Edit the task
-- Mark the task as completed
-- Delete the task
-
----
-
-### 4. Progress
-
-Displays task completion and productivity information.
-
-Users can use this screen to understand their current task progress.
-
----
-
-### 5. Focus Timer
-
-Provides a dedicated focused-work session.
-
-Features include:
-
-- Focus duration selection
-- Countdown timer
-- Start/stop controls
-- Focus session completion
-
----
-
-### 6. Settings
-
-Provides application preferences and controls.
-
-Features include:
-
-- User name
-- Notification settings
-- Focus duration
-- Task-data controls
-- Application information
-
----
-
-## 🔄 Screen Navigation
-
-```text
-                         Dashboard
-                            │
-          ┌─────────────────┼─────────────────┐
-          │                 │                 │
-          ▼                 ▼                 ▼
-     Add/Edit Task       Progress        Focus Timer
-          │
-          ▼
-     Task Details
-
-                            │
-                            ▼
-                         Settings
+*Implementation and testing status should be updated to reflect the actual results.*
